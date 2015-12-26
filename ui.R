@@ -5,10 +5,8 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       helpText("start typing to select episodes that contain certain features"),
-      selectizeInput('i1', NULL, NULL, multiple = TRUE),
-      shiny::tags$small("many of the videos don't have links yet. You can help by adding them in at the", 
-                        a("source repository", href="https://github.com/ctSkennerton/bob-ross")
-                        )
+      selectizeInput('i1', NULL, NULL, multiple = TRUE)
+      
     ),
     mainPanel(
       dataTableOutput("display_table")
